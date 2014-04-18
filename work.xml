@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!-- This file is part of project_allocation_report Tryton.  
+     The COPYRIGHT file at the top level of this repository contains 
+     the full copyright notices and license terms. -->
+
+<tryton>
+    <data>
+        <record model="ir.ui.view" id="work_view_list2">
+            <field name="model">project.work</field>
+            <field name="type">tree</field>
+            <field name="inherit" ref="project.work_view_list2"/>
+            <field name="name">work_list2</field>
+        </record>
+    </data>
+</tryton>
