@@ -17,9 +17,6 @@ class Work:
 
     @classmethod
     def search_assigned_employees(cls, name, clause):
-        pool = Pool()
-        Allocation = pool.get('project.allocation')
-        clause2 = ['employee'] + clause[1:]
-        allocation = Allocation.search(clause2)
-        tasks = [x.work.id for x in allocation]
-        return [('id', 'in', tasks)]
+        if clause[2] is None:
+            return [('allocations',) + tuple(clause[1:])]
+        return [('allocations.employee',) + tuple(clause[1:])]
