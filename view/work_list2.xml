@@ -3,6 +3,6 @@
 this repository contains the full copyright notices and license terms. -->
 <data>
     <xpath expr="/tree/field[@name='total_effort']" position="after">
-        <field name="assigned_employees"/>
+        <field name="assigned_employee"/>
     </xpath>
 </data>
